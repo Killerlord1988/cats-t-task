@@ -1,0 +1,54 @@
+.catalog {
+  padding-top: 37px;
+  padding-bottom: 83px;
+}
+
+.catalog__sort-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 38px;
+}
+
+.catalog__sort-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-right: 48px;
+}
+
+.catalog__sort-btn {
+  position: relative;
+  padding-right: 30px;
+  margin-right: 55px;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-black;
+}
+
+.catalog__sort-btn::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 12px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../img/arrow.svg");
+  fill: black;
+}
+
+.catalog__items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog__item {
+  margin-bottom: 27px;
+}
+
+.catalog__description {
+  padding: 30px;
+  padding-bottom: 0;
+}
