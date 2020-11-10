@@ -26,6 +26,14 @@
   color: $color-black;
 }
 
+.catalog__sort-btn:hover {
+  opacity: 0.8;
+}
+
+.catalog__sort-btn:active {
+  opacity: 0.5;
+}
+
 .catalog__sort-btn::after {
   position: absolute;
   content: "";
@@ -50,23 +58,6 @@
   position: relative;
 }
 
-.catalog__item::before {
-  cursor: pointer;
-  position: absolute;
-  content: "";
-  right: 34px;
-  top: 32px;
-  width: 46px;
-  height: 42px;
-  background-image: url("../img/like-heart.svg");
-  opacity: 0.5;
-  z-index: 2;
-}
-
-.catalog__item-like::before {
-  opacity: 1;
-}
-
 .catalog__item-discount::after {
   position: absolute;
   content: "-40%";
@@ -84,6 +75,27 @@
 .catalog__photo {
   position: relative;
   line-height: 0;
+}
+
+.catalog__photo::before {
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  right: 34px;
+  top: 32px;
+  width: 46px;
+  height: 42px;
+  background-image: url("../img/like-heart.svg");
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.catalog__photo-like::before {
+  opacity: 1;
+}
+
+.catalog__item:hover .catalog__photo::before {
+  opacity: 0.7;
 }
 
 .catalog__description {
@@ -164,6 +176,14 @@
   border-bottom-left-radius: 10px;
 }
 
+.catalog__buy:hover {
+  opacity: 0.8;
+}
+
+.catalog__buy:active {
+  opacity: 0.5;
+}
+
 .catalog__sold-out {
   background-color: $color-dark;
   cursor: not-allowed;
@@ -182,4 +202,13 @@
   border: 1px solid $color-gray-border;
   box-sizing: border-box;
   border-radius: 10px;
+}
+
+.catalog__more:hover {
+  opacity: 0.8;
+  background-color: $color-gray;
+}
+
+.catalog__more:active {
+  opacity: 0.5;
 }

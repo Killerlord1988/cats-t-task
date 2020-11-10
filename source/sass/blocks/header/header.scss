@@ -57,6 +57,14 @@
   color: $color-white;
 }
 
+.header__nav-link:hover {
+  opacity: 0.8;
+}
+
+.header__nav-link:active {
+  opacity: 0.5;
+}
+
 .header__contacts {
   margin-left: auto;
 }
@@ -66,6 +74,14 @@
   font-size: 24px;
   line-height: 29px;
   color: $color-white;
+}
+
+.header__contacts-tel:hover {
+  opacity: 0.8;
+}
+
+.header__contacts-tel:active {
+  opacity: 0.5;
 }
 
 .header__contacts-title {
