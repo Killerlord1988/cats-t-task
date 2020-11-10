@@ -99,3 +99,28 @@
   color: $color-white;
   z-index: 3;
 }
+
+@media (max-width: $tablet-width) {
+  .header__wrapper-nav {
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .header__nav {
+    margin-bottom: 30px;
+    order: 2;
+    width: 100%;
+  }
+
+  .header__nav-item:last-child {
+    margin-right: 0;
+  }
+
+  .header__contacts {
+    order: 1;
+  }
+}

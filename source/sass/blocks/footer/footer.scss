@@ -60,6 +60,14 @@
   cursor: pointer;
 }
 
+.footer__form-button:hover {
+  opacity: 0.8;
+}
+
+.footer__form-button:active {
+  opacity: 0.5;
+}
+
 .footer__checkbox-label {
   cursor: pointer;
   user-select: none;
@@ -92,4 +100,26 @@
   transform: translateY(-50%);
   left: 5px;
   background-image: url("../img/check-mark.svg");
+}
+
+@media (max-width: $tablet-width) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-wrapper-text {
+    margin-bottom: 30px;
+  }
+
+  .footer__form {
+    max-width: none;
+  }
+
+  .footer__form-email {
+    max-width: none;
+  }
+
+  .footer__form-button {
+    max-width: none;
+  }
 }

@@ -212,3 +212,9 @@
 .catalog__more:active {
   opacity: 0.5;
 }
+
+@media (max-width: $tablet-width) {
+  .catalog__items-wrapper {
+    justify-content: space-evenly;
+  }
+}
