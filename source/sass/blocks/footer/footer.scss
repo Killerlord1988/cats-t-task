@@ -123,3 +123,32 @@
     max-width: none;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .footer__title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .footer__text {
+    font-size: 18px;
+    line-height: 19px;
+    width: 100%;
+  }
+
+  .footer__form-email {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .footer__form-button {
+    width: 100%;
+  }
+}

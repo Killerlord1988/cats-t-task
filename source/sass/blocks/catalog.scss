@@ -218,3 +218,58 @@
     justify-content: space-evenly;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .catalog__sort-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catalog__sort-title {
+    margin-bottom: 20px;
+  }
+
+  .catalog__sort-btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .catalog__item-discount::after {
+    top: 10px;
+    left: 10px;
+    transform: scale(0.7);
+  }
+
+  .catalog__photo::before {
+    top: 10px;
+    right: 10px;
+    transform: scale(0.7);
+  }
+
+  .catalog__description-about {
+    flex-direction: column;
+  }
+
+  .catalog__description-color {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .catalog__description-age {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .catalog__description-legs {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+
+  .catalog__more {
+    width: 100%;
+  }
+}

@@ -124,3 +124,23 @@
     order: 1;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .header__logo {
+    width: 50px;
+    margin-right: 0;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+  }
+
+  .header__contacts-tel {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .header__contacts-title {
+    font-size: 16px;
+  }
+}
