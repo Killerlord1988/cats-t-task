@@ -1,0 +1,29 @@
+.up-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 59px;
+  height: 59px;
+  background-color: $color-blue;
+  background-image: url("../img/arrow-white.svg");
+  background-size: 18px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+}
+
+.up-button--show {
+  opacity: 1;
+  display: block;
+}
+
+@media (max-width: 430px) {
+  .up-button {
+    transform: scale(0.8);
+    bottom: 4px;
+    right: 4px;
+  }
+}
