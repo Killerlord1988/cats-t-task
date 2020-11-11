@@ -77,9 +77,9 @@ function clearBox(el) {
   el.innerHTML = "";
 }
 
-clearBox(catalog);
-
 function renderItems() {
+  clearBox(catalog);
+
   let itemsList = ''
   cats.forEach((item, i) => {
     itemsList += `
@@ -109,3 +109,19 @@ function renderItems() {
 }
 
 renderItems();
+
+function mySort(field) {
+  return (a, b) => a[field] > b[field] ? 1 : -1;
+}
+
+sortPrice.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  cats = cats.sort(mySort('price'));
+  renderItems();
+})
+
+sortAge.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  cats = cats.sort(mySort('age'));
+  renderItems();
+})
