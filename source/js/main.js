@@ -131,5 +131,43 @@ document.addEventListener('click', ({ target: t }) => {
     const index = [...document.querySelectorAll('.catalog__photo')].indexOf(t);
     const count = document.querySelectorAll('.catalog__photo')[index];
     count.classList.toggle('catalog__photo-like');
+    if (count.classList.contains('catalog__photo-like')) {
+      console.log('sdsd');
+    }
+    showNotification({
+      top: 10,
+      right: 10,
+      html: `${(count.classList.contains('catalog__photo-like')) ? 'Добавлено в избранное' : 'Убрано из избранного'}`,
+      className: "info__message"
+    });
   }
 });
+
+function showNotification({top = 0, right = 0, className, html}) {
+
+  let notification = document.createElement('div');
+  notification.className = "info__notification";
+  if (className) {
+    notification.classList.add(className);
+  }
+
+  notification.style.top = top + 'px';
+  notification.style.right = right + 'px';
+
+  notification.innerHTML = html;
+  document.body.append(notification);
+
+  setTimeout(() => notification.remove(), 1500);
+}
+
+// // test it
+// let i = 1;
+// setInterval(() => {
+//   showNotification({
+//     top: 10,
+//     right: 10,
+//     html: 'Hello ' + i++,
+//     className: "welcome"
+//   });
+// }, 2000);
+// </script>
