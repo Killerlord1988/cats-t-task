@@ -94,10 +94,6 @@
   opacity: 1;
 }
 
-.catalog__item:hover .catalog__photo::before {
-  opacity: 0.7;
-}
-
 .catalog__description {
   background-color: $color-gray;
   padding: 30px;

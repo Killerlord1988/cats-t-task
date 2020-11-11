@@ -1,7 +1,7 @@
 'use strict';
 
-let sortPrice = document.querySelector('.catalog__sort-btn--price');
-let sortAge = document.querySelector('.catalog__sort-btn--age');
+const sortPrice = document.querySelector('.catalog__sort-btn--price');
+const sortAge = document.querySelector('.catalog__sort-btn--age');
 
 const catalog = document.querySelector('.catalog__items-wrapper');
 
@@ -125,3 +125,11 @@ sortAge.addEventListener('click', function(evt) {
   cats = cats.sort(mySort('age'));
   renderItems();
 })
+
+document.addEventListener('click', ({ target: t }) => {
+  if (t.classList.contains('catalog__photo')) {
+    const index = [...document.querySelectorAll('.catalog__photo')].indexOf(t);
+    const count = document.querySelectorAll('.catalog__photo')[index];
+    count.classList.toggle('catalog__photo-like');
+  }
+});
