@@ -34,10 +34,11 @@ gulp.task("css", function () {
 gulp.task("script-min", function() {
   return gulp.src([
     "source/js/scrollUp.js",
+    "source/js/main.js",
   ])
   .pipe(sourcemap.init())
   .pipe(concat('script.js'))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(rename({suffix: ".min"}))
   .pipe(sourcemap.write("."))
   .pipe(gulp.dest("build/js"));

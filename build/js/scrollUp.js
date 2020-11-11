@@ -2,18 +2,20 @@
 
   var btnScrollUp = document.querySelector('.up-button');
 
+  function showBtnScrollUp() {
+    if (window.pageYOffset > 200) {
+      btnScrollUp.classList.add('up-button--show')
+    } else {
+    btnScrollUp.classList.remove('up-button--show')
+  }
+}
+
   function scrollUp() {
-    console.log('sds');
-    // var windowCoords = document.documentElement.clientHeight;
-    // (function scroll() {
-    //   if (window.pageYOffset < windowCoords) {
-    //     window.scrollBy(0, 0);
-    //     setTimeout(scroll, 0);
-    //   }
-    //   if (window.pageYOffset > windowCoords) {
-    //     window.scrollTo(0, windowCoords);
-    //   }
-    // })();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
   }
 
   btnScrollUp.addEventListener('click', scrollUp);
+  window.addEventListener('scroll', showBtnScrollUp);
