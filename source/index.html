@@ -36,15 +36,15 @@
       <h2 class="catalog__title visually-hidden">Выбор котов</h2>
       <div class="catalog__sort-wrapper">
         <p class="catalog__sort-title">Сортировать по:</p>
-        <a class="catalog__sort-btn" href="#">Цене</a>
-        <a class="catalog__sort-btn" href="#">Возрасту</a>
+        <a class="catalog__sort-btn catalog__sort-btn--price" href="#">Цене</a>
+        <a class="catalog__sort-btn catalog__sort-btn--age" href="#">Возрасту</a>
       </div>
       <div class="catalog__items-wrapper">
-        <article class="catalog__item">
+        <article class="catalog__item catalog__item-discount">
           <div class="catalog__photo">
             <picture>
-              <source type="image/webp" srcset="img/cat@1x.webp 1x, img/cat@2x.webp 2x">
-              <img class="catalog__photo-img" src="img/cat@1x.jpg" srcset="img/cat@2x.jpg 2x" alt="Кот 1" width="380"
+              <source type="image/webp" srcset="img/cat1@1x.webp 1x, img/cat1@2x.webp 2x">
+              <img class="catalog__photo-img" src="img/cat1@1x.jpg" srcset="img/cat1@2x.jpg 2x" alt="Кот 1" width="380"
                 height="264">
             </picture>
           </div>
@@ -58,11 +58,11 @@
               </p>
             </div>
             <p class="catalog__price">30 000 руб.</p>
-            <button class="catalog__buy">Купить</button>
           </div>
+          <button class="catalog__buy">Купить</button>
         </article>
         <article class="catalog__item">
-          <div class="catalog__photo">
+          <div class="catalog__photo catalog__photo-like">
             <picture>
               <source type="image/webp" srcset="img/cat2@1x.webp 1x, img/cat2@2x.webp 2x">
               <img class="catalog__photo-img" src="img/cat2@1x.jpg" srcset="img/cat2@2x.jpg 2x" alt="Кот 1" width="380"
@@ -79,8 +79,8 @@
               </p>
             </div>
             <p class="catalog__price">40 000 руб.</p>
-            <button class="catalog__buy">Купить</button>
           </div>
+          <button class="catalog__buy catalog__sold-out">Продан</button>
         </article>
         <article class="catalog__item">
           <div class="catalog__photo">
@@ -100,14 +100,14 @@
               </p>
             </div>
             <p class="catalog__price">20 000 руб.</p>
-            <button class="catalog__buy">Купить</button>
           </div>
+          <button class="catalog__buy">Купить</button>
         </article>
         <article class="catalog__item">
           <div class="catalog__photo">
             <picture>
-              <source type="image/webp" srcset="img/cat@1x.webp 1x, img/cat@2x.webp 2x">
-              <img class="catalog__photo-img" src="img/cat@1x.jpg" srcset="img/cat@2x.jpg 2x" alt="Кот 1" width="380"
+              <source type="image/webp" srcset="img/cat1@1x.webp 1x, img/cat1@2x.webp 2x">
+              <img class="catalog__photo-img" src="img/cat1@1x.jpg" srcset="img/cat1@2x.jpg 2x" alt="Кот 1" width="380"
                 height="264">
             </picture>
           </div>
@@ -121,10 +121,10 @@
               </p>
             </div>
             <p class="catalog__price">25 000 руб.</p>
-            <button class="catalog__buy">Купить</button>
           </div>
+          <button class="catalog__buy">Купить</button>
         </article>
-        <article class="catalog__item">
+        <article class="catalog__item catalog__item-discount">
           <div class="catalog__photo">
             <picture>
               <source type="image/webp" srcset="img/cat3@1x.webp 1x, img/cat3@2x.webp 2x">
@@ -142,11 +142,11 @@
               </p>
             </div>
             <p class="catalog__price">30 000 руб.</p>
-            <button class="catalog__buy">Купить</button>
           </div>
+          <button class="catalog__buy">Купить</button>
         </article>
         <article class="catalog__item">
-          <div class="catalog__photo">
+          <div class="catalog__photo catalog__photo-like">
             <picture>
               <source type="image/webp" srcset="img/cat2@1x.webp 1x, img/cat2@2x.webp 2x">
               <img class="catalog__photo-img" src="img/cat2@1x.jpg" srcset="img/cat2@2x.jpg 2x" alt="Кот 1" width="380"
@@ -163,8 +163,8 @@
               </p>
             </div>
             <p class="catalog__price">10 000 руб.</p>
-            <button class="catalog__buy">Купить</button>
           </div>
+          <button class="catalog__buy catalog__sold-out">Продан</button>
         </article>
       </div>
       <button class="catalog__more">Показать еще 20</button>
@@ -177,13 +177,16 @@
     </div>
     <div class="footer__wrapper-submit">
       <form class="footer__form" action="https://echo.htmlacademy.ru" method="POST">
-        <input class="footer__form-email" type="email" name="email" id="email" placeholder="Email">
+        <input class="footer__form-email" type="email" name="email" id="email" placeholder="Email" required>
         <button class="footer__form-button" type="submit">Подписаться</button>
         <input class="footer__checkbox visually-hidden" type="checkbox" name="news__success" id="news__success">
         <label class="footer__checkbox-label" for="news__success">Подписаться на новости</label>
       </form>
     </div>
   </footer>
+  <!-- up button -->
+  <button class="up-button"></button>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
